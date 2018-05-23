@@ -1,15 +1,12 @@
 pragma solidity ^0.4.18;
 
 import './ERC20.sol';
-import './Factory.sol';
 
 contract RobotLiabilityAPI {
     /* Constants */
     bytes constant MSGPREFIX = "\x19Ethereum Signed Message:\n32";
 
     /* State variables */
-    Factory public factory;
-
     address public promisor;
     address public promisee;
 
