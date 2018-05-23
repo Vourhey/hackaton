@@ -1,2 +1,0 @@
-hackaton
--DCATKIN_DEVEL_PREFIX=/home/demo/hackaton/services-pkg/devel -DCMAKE_INSTALL_PREFIX=/home/demo/hackaton/services-pkg/install -G Unix Makefiles

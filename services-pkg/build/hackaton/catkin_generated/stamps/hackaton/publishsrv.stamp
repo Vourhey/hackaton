@@ -1,7 +1,0 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from hackaton.nodes import publish_node
-
-if __name__ == '__main__':
-    publish_node()
-

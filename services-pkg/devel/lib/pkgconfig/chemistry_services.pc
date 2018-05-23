@@ -1,8 +1,0 @@
-prefix=/home/demo/hackaton/services-pkg/devel
-
-Name: chemistry_services
-Description: Description of chemistry_services
-Version: 0.1.0
-Cflags: -I/home/demo/hackaton/services-pkg/devel/include
-Libs: -L/home/demo/hackaton/services-pkg/devel/lib 
-Requires: 
