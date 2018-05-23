@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="hackaton" name="make_ask_bid" type="makeasksrv" output="screen"/>
+    <node pkg="hackaton" name="publish_node" type="publishsrv" output="screen"/>
+</launch>

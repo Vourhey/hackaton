@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chemistry Quality Control</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+    {% load staticfiles %}
+    <script src="{% static "js/robonomics.min.js" %}"></script>
+    <script src="{% static "js/socket.io.js" %}"></script>
+    <script src="{% static "js/app.js" %}"></script>
+</head>
+<body>
+<p style="text-align: center;">
+<button onclick="sendAsk()" >Send a demand</button>
+</p>
+
+    <script>
+    function sendFile (  ) {
+        console.log("I'm about to send a file");
+        var fd = new FormData();
+        fd.append( 'file',  input.files[0] );
+
+        $.ajax({
+          url: 'http://127.0.0.1:8000/',
+          data: fd,
+          processData: false,
+          contentType: false,
+          type: 'POST',
+          success: function(data){
+            alert(data);
+          }
+        });
+    }
+    </script>
+
+ <form method="post" enctype="multipart/form-data" id="form_file" hidden style="text-align: center; padding: 30px;" >
+  {% csrf_token %}
+  <input type="file" name="myfile"> 
+  <button onclick="sendFile">Upload</button>
+</form>
+
+<div style="overflow: hidden;">
+  <div style="width:30%;float:left;border: 1px solid #eee;padding:10px;margin-right:10px">
+    <h2>Ask</h2>
+    <div id="ask"></div>
+  </div>
+  <div style="width:30%;float:left;border: 1px solid #eee;padding:10px;margin-right:10px">
+    <h2>Bid</h2>
+    <div id="bid"></div>
+  </div>
+  <div style="width:30%;float:left;border: 1px solid #eee;padding:10px">
+    <h2>Liability</h2>
+    <div id="liability"></div>
+  </div>
+</div>
+</body>
+</html>

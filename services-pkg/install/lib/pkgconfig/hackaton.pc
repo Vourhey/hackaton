@@ -1,0 +1,8 @@
+prefix=/home/demo/hackaton/services-pkg/install
+
+Name: hackaton
+Description: Description of hackaton
+Version: 0.1.0
+Cflags: -I/home/demo/hackaton/services-pkg/install/include
+Libs: -L/home/demo/hackaton/services-pkg/install/lib 
+Requires: 

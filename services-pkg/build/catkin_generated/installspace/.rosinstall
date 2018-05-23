@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/demo/hackaton/services-pkg/install/setup.sh
